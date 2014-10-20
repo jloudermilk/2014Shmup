@@ -1,0 +1,50 @@
+Struct Vector2
+	float x
+	float y
+	float Distance(&Vector2)
+	float Dot(&Vector2)
+	operator *(&Vector2)
+	operator +(&Vetor2)
+	operator *=(&Vector2)
+	operator +=(&Vetor2)
+
+
+CircleCollider
+	float radius
+	Vector2 center
+	bool CheckCollision(&CircleCollider)
+
+Entity Class
+	Vector2 pos
+	float width
+	float height
+	Vector2 speed
+	bool alive
+	uint spriteID
+
+	virtual Update
+	virtual Draw
+
+Player->Entity
+	int health
+	CircleCollider c
+	void Update
+	void Draw
+	void Shoot
+	void Input
+
+Enemy->Entity
+	int health
+	CircleCollider c
+	void Update
+	void Draw
+	void Shoot
+
+Bullet->Entity
+	int health
+	CircleCollider c
+	void Update
+	void Draw
+Enviroment->Entity
+	void Update
+	void Draw
