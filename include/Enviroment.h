@@ -6,5 +6,7 @@ class Enviroment :
 public:
 	Enviroment();
 	~Enviroment();
+	void Update();
+	void Draw();
 };
 
