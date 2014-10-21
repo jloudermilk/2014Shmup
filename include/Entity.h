@@ -1,6 +1,6 @@
 #ifndef _Entity_H_
 #define _Entity_H_
-#include "Maths.h"
+#include "Utility.h"
 #include "CircleCollider.h"
 #include "AIE.h"
 class Entity

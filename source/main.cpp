@@ -11,7 +11,7 @@ int main( int argc, char* argv[] )
     SetBackgroundColour(SColour(0, 0, 0, 255));
 	Player * player = new Player("./images/Player.png", 32, 32);
 	player->Init(Vector2(100.f, 100.f), Vector2(0, 0), 10.f, 1);
-
+	BulletManager::Init();
 	
 	gameObjects.push_back(player);
 
@@ -20,11 +20,15 @@ int main( int argc, char* argv[] )
     do
     {
 		deltaTime = GetDeltaTime();
-		for each (Entity* var in gameObjects)
+		for each (Entity* entity in gameObjects)
 		{
-			var->Update(deltaTime);
-			var->Draw();
+			if (entity->alive)
+			{
+			entity->Update(deltaTime);
+			entity->Draw();
+			}
 		}
+		BulletManager::Update(deltaTime);
 
         ClearScreen();
 

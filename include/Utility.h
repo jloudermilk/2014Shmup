@@ -1,6 +1,13 @@
-#ifndef _MATHS_H_
-#define _MATHS_H_
+#ifndef _Utility_H_
+#define _Utility_H_
 #include <math.h>
+enum TYPE 
+{
+	PLAYER = 0,
+	ENEMY
+};
+
+
 struct Vector2
 {
 	float x, y;
