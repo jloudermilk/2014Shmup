@@ -6,6 +6,16 @@ enum TYPE
 	PLAYER = 0,
 	ENEMY
 };
+enum  ENEMYTYPE
+{
+	DOWN,
+	DIAG,
+	LOOP,
+	WAVE
+};
+
+const int SCREENWIDTH = 800;
+const int SCREEHEIGHT = 600;
 
 
 struct Vector2
@@ -34,6 +44,15 @@ struct Vector2
 	{
 		x = 0;
 		y = 0;
+	}
+
+	Vector2 Up()
+	{
+		return Vector2(0, 1);
+	}
+	Vector2 Right()
+	{
+		return Vector2(1, 0);
 	}
 	Vector2 operator * (Vector2 &other)
 	{
@@ -76,4 +95,5 @@ struct Vector2
 	}
 };
 
+static Vector2 playerPos;
 #endif

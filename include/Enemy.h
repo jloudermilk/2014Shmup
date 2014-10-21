@@ -6,7 +6,20 @@ class Enemy :
 public:
 	Enemy();
 	~Enemy();
-	void Update();
+
+	Enemy(const char* a_path, float a_width, float a_height);
+	void Init(Vector2 a_pos, Vector2 speed, float radius, int health, ENEMYTYPE a_type);
+
+	void Update(float a_deltaTime);
 	void Draw();
+
+	void MoveEnemy();
+	void Shoot();
+
+	int type;
+	int health;
+	float fireDelay;
+	float fireTime;
+	float bulletSpeed;
 };
 

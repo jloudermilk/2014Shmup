@@ -2,7 +2,9 @@
 
 
 
-
+Bullet::Bullet()
+{
+}
 Bullet::~Bullet()
 {
 }
@@ -39,7 +41,7 @@ void Bullet::Update(float a_deltaTime)
 	pos += velocity * speed * a_deltaTime;
 	MoveSprite(spriteID, pos.x, pos.y);
 
-	if (pos.y > 1000)
+	if (pos.y > SCREEHEIGHT||pos.y <0||pos.x > SCREENWIDTH||pos.x < 0)
 		alive = false;
 }
 void Bullet::Draw()
