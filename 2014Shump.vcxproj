@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Bullet.cpp" />
+    <ClCompile Include="source\BulletManager.cpp" />
     <ClCompile Include="source\CircleCollider.cpp" />
     <ClCompile Include="source\Enemy.cpp" />
     <ClCompile Include="source\Entity.cpp" />
@@ -22,12 +23,13 @@
   <ItemGroup>
     <ClInclude Include="include\AIE.h" />
     <ClInclude Include="include\Bullet.h" />
+    <ClInclude Include="include\BulletManager.h" />
     <ClInclude Include="include\CircleCollider.h" />
     <ClInclude Include="include\Enemy.h" />
     <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\Enviroment.h" />
     <ClInclude Include="include\Player.h" />
-    <ClInclude Include="Maths.h" />
+    <ClInclude Include="include\Utility.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CA972E2A-97D0-4952-A4E4-3828FDF669EA}</ProjectGuid>

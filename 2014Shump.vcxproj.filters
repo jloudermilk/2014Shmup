@@ -36,6 +36,9 @@
     <ClCompile Include="source\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\BulletManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AIE.h">
@@ -59,7 +62,10 @@
     <ClInclude Include="include\Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Maths.h">
+    <ClInclude Include="include\BulletManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
