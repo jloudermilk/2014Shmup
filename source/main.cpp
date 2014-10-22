@@ -18,7 +18,9 @@ int main( int argc, char* argv[] )
 	
 	gameObjects.push_back(player);
 	gameObjects.push_back(testy);
+	
 
+	
 	float deltaTime;
     //Game Loop
     do
@@ -32,6 +34,10 @@ int main( int argc, char* argv[] )
 			{
 			entity->Update(deltaTime);
 			entity->Draw();
+			if (dynamic_cast<Player*>(entity) != 0)
+			{
+				playerPos = entity->pos;
+			}
 			}
 		}
         ClearScreen();

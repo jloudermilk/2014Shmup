@@ -33,6 +33,11 @@ public:
 		{
 			playerBullets.emplace_back(new Bullet("./images/BulletR2.png", 6, 8));
 		}
+		for (int i = 0; i < bulletListSize; i++)
+		{
+			enemyBullets.emplace_back(new Bullet("./images/EnemyBullet1.png", 8, 8));
+		}
+	
 	
 
 	}

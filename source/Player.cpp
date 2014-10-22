@@ -114,9 +114,11 @@ void Player::Update(float a_deltaTime)
 {
 	fireTime += a_deltaTime;
 	Input();
+
 	pos += velocity * speed * a_deltaTime;
-	MoveSprite(spriteID, pos.x,pos.y);
 	playerPos = pos;
+	MoveSprite(spriteID, pos.x,pos.y);
+	
 }
 void Player::Draw()
 {

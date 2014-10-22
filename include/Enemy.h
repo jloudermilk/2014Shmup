@@ -1,5 +1,6 @@
 #pragma once
 #include "Entity.h"
+#include "BulletManager.h"
 class Enemy :
 	public Entity
 {
@@ -20,6 +21,11 @@ public:
 	int health;
 	float fireDelay;
 	float fireTime;
+
+	float lifeTime;
 	float bulletSpeed;
+
+	Vector2 direction;
+
 };
 

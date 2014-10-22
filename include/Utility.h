@@ -36,9 +36,15 @@ struct Vector2
 	{
 		return(sqrtf(((x - other.x)*(x - other.x)) + ((y - other.y)*(y - other.y))));
 	}
+	float SqDistance(Vector2 &other)
+	{
+		return ((x - other.x)*(x - other.x)) + ((y - other.y)*(y - other.y));
+	}
 	float Dot(Vector2 &other)
 	{
-		return ((x*other.x) + (y*other.y));
+		float num = ((x-other.x) + (y-other.y));
+		float denom = Distance(other);
+		return (num / denom);
 	}
 	void Zero()
 	{
@@ -46,21 +52,7 @@ struct Vector2
 		y = 0;
 	}
 
-	Vector2 Up()
-	{
-		return Vector2(0, 1);
-	}
-	Vector2 Right()
-	{
-		return Vector2(1, 0);
-	}
-	Vector2 operator * (Vector2 &other)
-	{
-		Vector2 temp;
-		temp.y = y * other.y;
-		temp.x = x * other.x;
-		return temp;
-	}
+
 	Vector2 operator * (float &value)
 	{
 		Vector2 temp;
@@ -76,12 +68,16 @@ struct Vector2
 		return temp;
 
 	}
+
 	void operator *= (Vector2 &other)
 	{
-		y *= other.y;
-		x *= other.x;
-	
-
+		y *= (other.y >= 0) ? 1 : ((other.y < 0) ? -1 : 0);
+		x *= (other.x >= 0) ? 1 : ((other.x < 0) ? -1 : 0);
+	}
+	void operator *= (float &value)
+	{
+		y *= value;
+		x *= value;
 	}
 	void operator += (Vector2 &other)
 	{
@@ -95,5 +91,5 @@ struct Vector2
 	}
 };
 
-static Vector2 playerPos;
+extern Vector2 playerPos;
 #endif

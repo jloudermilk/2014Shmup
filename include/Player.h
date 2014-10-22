@@ -1,6 +1,7 @@
 #ifndef _Player_H_
 #define _Player_H_
 #include "Entity.h"
+#include "Utility.h"
 #include "BulletManager.h"
 class Player :
 	public Entity
